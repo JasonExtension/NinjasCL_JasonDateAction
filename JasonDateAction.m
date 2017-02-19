@@ -120,7 +120,7 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
     JasonOptionHelper * options = [[JasonOptionHelper alloc]
                                    initWithOptions:self.options];
     
-    if ([options containRequiredParam:@"date"])
+    if ([options hasParam:@"date"])
     {
         NSString * dateIn = [options getString:@"date"];
         
