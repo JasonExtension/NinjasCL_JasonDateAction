@@ -90,6 +90,7 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
                                         stringFromDate:now],
                               @"unix" : @([now timeIntervalSince1970]),
                               @"format" : dateFormatter.dateFormat,
+                              @"locale" : dateFormatter.locale.localeIdentifier,
                               @"timezone" : @{
                                       @"name" : timezone.name,
                                       @"secondsFromGMT" : @(timezone.secondsFromGMT)
@@ -120,7 +121,7 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
     JasonOptionHelper * options = [[JasonOptionHelper alloc]
                                    initWithOptions:self.options];
     
-    if ([options containRequiredParam:@"date"])
+    if ([options hasParam:@"date"])
     {
         NSString * dateIn = [options getString:@"date"];
         
@@ -158,6 +159,7 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
                                       @"date" : [dateFormatter
                                                  stringFromDate:date],
                                       @"format" : dateFormatter.dateFormat,
+                                      @"locale" : dateFormatter.locale.localeIdentifier,
                                       @"unix" : @([date timeIntervalSince1970])                                              };
             
             return [[Jason client] success:result];
