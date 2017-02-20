@@ -30,13 +30,12 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
         
     });
 
-        // English Locale
+    // English Locale
     [dateFormatter setLocale:enUSPOSIXLocale];
     
     // ISO 8601 Format
     [dateFormatter setDateFormat:kISO8601Format];
 
-    
     JasonOptionHelper * options = [[JasonOptionHelper alloc]
                                    initWithOptions:self.options];
 
