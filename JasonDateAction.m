@@ -160,7 +160,8 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
                                                  stringFromDate:date],
                                       @"format" : dateFormatter.dateFormat,
                                       @"locale" : dateFormatter.locale.localeIdentifier,
-                                      @"unix" : @([date timeIntervalSince1970])                                              };
+                                      @"unix" : @([date timeIntervalSince1970])         
+                                    };
             
             return [[Jason client] success:result];
         }
