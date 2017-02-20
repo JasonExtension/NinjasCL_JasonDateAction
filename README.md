@@ -100,8 +100,8 @@ Transforms a Unix Timestamp into a Formatted Date. Defaults to `ISO 8601` (`yyyy
 {
   "date" : "2017-02-19T13:53:47-03:00", 
   "unix" : "1487523227.613869",
-    "format" : "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
-    "locale" : "en_US_POSIX",
+  "format" : "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
+  "locale" : "en_US_POSIX",
 }
 ```
 
