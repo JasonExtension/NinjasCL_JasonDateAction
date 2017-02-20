@@ -37,6 +37,7 @@ Returns the current date and the timezone information retrieved from the phone. 
 	"date" : "2017-02-19T13:53:47-03:00", 
 	"unix" : "1487523227.613869",
     "format" : "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
+    "locale" : "en_US_POSIX",
 	"timezone" : {
 	   "name" : "America/Santiago",
 	   "secondsFromGMT" : "-10800"
@@ -70,7 +71,8 @@ Retrieves a date in a given format and output in another format.
 {
   "date" : "2017-02-19T13:53:47-03:00", 
   "unix" : "1487523227.613869",
-  "format" : "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+  "format" : "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
+  "locale" : "en_US_POSIX"
 }
 ```
 
