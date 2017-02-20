@@ -76,4 +76,33 @@ Retrieves a date in a given format and output in another format.
 }
 ```
 
+### $date.unix
+Transforms a Unix Timestamp into a Formatted Date. Defaults to `ISO 8601` (`yyyy-MM-dd'T'HH:mm:ssZZZZZ`) Format and `en_US_POSIX` locale.
+
+### Params
+
+- date (required)
+- format (optional, defaults=`ISO8601`)
+- locale (optional, defaults=`en_US_POSIX`)
+
+```json
+{
+    "type": "$date.unix",
+     "options": {
+        "date" : "1487523227.613869"
+     }
+}
+```
+
+#### Result
+
+```json
+{
+  "date" : "2017-02-19T13:53:47-03:00", 
+  "unix" : "1487523227.613869",
+    "format" : "yyyy-MM-dd'T'HH:mm:ssZZZZZ",
+    "locale" : "en_US_POSIX",
+}
+```
+
 Made with <i class="fa fa-heart">&#9829;</i> by <a href="http://ninjas.cl" target="_blank">Ninjas.cl</a>.

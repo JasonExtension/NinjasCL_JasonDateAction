@@ -170,4 +170,44 @@ NSString * const kISO8601Format = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
     [[Jason client] error];
 }
 
+/*!
+ * Transforms a Unix Timestamp into a Formatted Date.
+ * Defaults to ISO 8601 Format and en_US_POSIX Locale.
+ *
+ * @return
+ *  - date (string)
+ *  - unix (number)
+ *
+ * @options
+ *  - date (number, required)
+ *  - format (string)
+ *  - locale (string)
+ */
+- (void) unix 
+{
+  JasonOptionHelper * options = [[JasonOptionHelper alloc]
+                                   initWithOptions:self.options];
+    
+  if ([options hasParam:@"date"])
+  {
+    NSDateFormatter * dateFormatter = [self __defaultDateFormatter];
+    
+    NSDate * date = [NSDate dateWithTimeIntervalSince1970:
+                      [[options getNumber:@"date"] doubleValue]
+                    ];
+
+    NSDictionary * result = @{
+                                      @"date" : [dateFormatter
+                                                 stringFromDate:date],
+                                      @"format" : dateFormatter.dateFormat,
+                                      @"locale" : dateFormatter.locale.localeIdentifier,
+                                      @"unix" : @([date timeIntervalSince1970])                                              };
+            
+    return [[Jason client] success:result];
+  }
+
+  // Params Not Found
+  [[Jason client] error];
+}
+
 @end
