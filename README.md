@@ -105,4 +105,7 @@ Transforms a Unix Timestamp into a Formatted Date. Defaults to `ISO 8601` (`yyyy
 }
 ```
 
+### Test App
+[https://raw.githubusercontent.com/NinjasCL/JasonDateAction/master/test.json](test.json)
+
 Made with <i class="fa fa-heart">&#9829;</i> by <a href="http://ninjas.cl" target="_blank">Ninjas.cl</a>.
